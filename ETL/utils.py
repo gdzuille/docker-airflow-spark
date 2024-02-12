@@ -3,6 +3,21 @@
 import pandas as pd
 import numpy as np
 import os
+from pyspark.sql import SparkSession
 
-def tst():
-    return None
+def create_sparksession():
+    """
+    Initialize Spark Session
+    """
+    return SparkSession.builder \
+        .appName('glovo-pipeline') \
+        .master('local') \
+        .config('spark.sql.sources.partitionColumnTypeInference.enabled', 'false') \
+        .config('spark.sql.parquet.compression.codec', 'snappy') \
+        .getOrCreate()
+
+def read_csv(spark, path, header=True, inferSchema=True):
+    """
+    Read CSV file into Spark DataFrame
+    """
+    return spark.read.csv(path, header=header, inferSchema=inferSchema)
