@@ -12,5 +12,5 @@ RUN export JAVA_HOME
 
 USER airflow
 
-# Installs needed packages, not using Poetry due to incompatibility issues
+# Installs needed packages, not using Poetry due to incompatibility issues, will be fixed in the future
 RUN pip install apache-airflow apache-airflow-providers-apache-spark pyspark findspark apache-airflow-providers-mongo apache-airflow-providers-microsoft-mssql 
