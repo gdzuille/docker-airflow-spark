@@ -40,8 +40,6 @@ Check the file */dags/test_dag.py* for an example.
 - **Python**: for developing I've used Python 3.8.10, on the Docker the version installed is 3.11. The Poetry dependencies allow between 3.8 and 3.12.
 - **Spark** and **JDK** Installation:
 
-For the current amount of data used for the test it would have been more efficient to use Pandas instead of Spark, but for future scalability and the real case scenario, Spark is more future-proven for a larger amount of events.
-
 Before installing the packages, you will need to specify the environment variables. Download Java from [here](https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html). 
 
 In the case of using Mac, you can download it directly using *brew*:
