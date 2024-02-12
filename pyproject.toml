@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "spark-airflow"
+version = "0.1.0"
+description = ""
+authors = ["Guille <guilledeladehesa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+pyspark = "3.5.0"
+apache-airflow = "*"
+apache-airflow-providers-apache-spark = "*"
+pytest = "*"
+logging = "*"
+pandas = "*"
+numpy = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
