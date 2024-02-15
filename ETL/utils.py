@@ -10,8 +10,7 @@ def create_sparksession():
     Initialize Spark Session
     """
     return SparkSession.builder \
-        .appName('glovo-pipeline') \
-        .master('local') \
+        .appName('airflow_demo') \
         .config('spark.sql.sources.partitionColumnTypeInference.enabled', 'false') \
         .config('spark.sql.parquet.compression.codec', 'snappy') \
         .getOrCreate()
